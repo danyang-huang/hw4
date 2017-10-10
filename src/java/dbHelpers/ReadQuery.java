@@ -123,6 +123,10 @@ public class ReadQuery {
                 table += lipstick.getRate();
                 table +="</td>";
                 
+                table += "<td>";
+                table += "<a href=delete?narsID=" + lipstick.getNarsID() +"> Delete </a>";
+                table +="</td>";
+                
                 table += "</tr>";
                 
                 
