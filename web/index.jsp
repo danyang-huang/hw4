@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Nars Lipstick Database</title>
+        <title>Nars Lipsticks Database</title>
     </head>
     <body>
-        <h1>Nars Lipstick Database</h1>
+        <h1>Nars Lipsticks Database</h1>
         
         <a href="read"> View All Lipsticks </a>
     </body>
