@@ -69,14 +69,14 @@ public class ReadQuery {
     public String getHTMLTable(){
         
         String table = "";
-        table += "<table border=1>";
+        table += "<table>";
         
         table += "<th>";
         table += "Nars ID";
         table += "</th>";
         
         table += "<th>";
-        table += "Sade";
+        table += "Shade";
         table += "</th>";
         
         table += "<th>";
@@ -90,6 +90,11 @@ public class ReadQuery {
         table += "<th>";
         table += "Rate";
         table += "</th>";
+        
+        table += "<th>";
+        table += " ";
+        table += "</th>";
+                
         try {
             while (this.results.next()){
                 
@@ -106,11 +111,14 @@ public class ReadQuery {
                 table +="<td>";
                 table += lipstick.getNarsID();
                 table +="</td>";
-                
+            
+                        
+            
                 table +="<td>";
                 table += lipstick.getShade();
                 table +="</td>";
-                
+          
+                        
                 table +="<td>";
                 table += lipstick.getSeries();
                 table +="</td>";

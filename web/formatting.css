@@ -1,0 +1,72 @@
+
+
+body{background-color:#D2B48C;}
+
+
+
+table {
+    border-collapse: collapse;
+    width:95%;
+height:50px;
+}
+
+table, td, th {
+    border: 3px solid #FFFFFF;
+    text-align: center;
+}
+
+table,th{background-color:#FFFF99;
+            color:#696969;
+            font-weight:bold;
+            padding: 25px;
+            vertical-align: bottom; 
+            height:40;
+            size:20px;}
+    
+table,tr{
+   background-color:#F08080;
+color:#FFFFFF;}
+
+ table  tr:hover  td{
+          background-color: #CCCCCC;	
+} 
+
+table tr:nth-child(even){background-color:  #EDEDED;
+                         color: #F08080;
+}
+
+td {height: 30px; 
+    vertical-align: bottom; 
+    padding: 10px;
+    text-align: center;
+    size:15px}
+
+
+
+h2{background-color:#F08080;
+    color: #FFFFFF;
+     padding:23px;
+    text-align: center;
+    border: 2px solid black;
+    width:91%;
+    }
+
+h1{background-color:#F08080;
+    color: #FFFFFF;
+     padding:23px;
+    text-align: center;
+    border: 2px solid black;
+    width:91%}
+
+input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #696969 ;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    background-color: #EDEDED;
+}
