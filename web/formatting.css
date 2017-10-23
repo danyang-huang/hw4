@@ -1,0 +1,126 @@
+
+body{background-color:#D2B48C;}
+
+.wrap{margin: auto;
+		width:80%;
+
+border:solid white;
+margin-top:25px;
+padding:30px;}
+
+.header{ text-align:left;padding:25px;}
+.headerImg{float:left;margin-left:30px;margin-right:80px;}
+.headerText{float:left; color:black;}
+body{background-color:#D2B48C;}
+
+.menu
+{
+margin: 0;
+padding: 0 0 20px 10px;
+border-bottom: 1px solid white;
+}
+
+.menu ul, #navlist li
+{
+margin: 0;
+padding: 0;
+display: inline;
+list-style-type: none;
+}
+
+.menu a:link, #navlist a:visited
+{
+float: left;
+line-height: 14px;
+font-weight: bold;
+margin: 0 10px 4px 10px;
+text-decoration: none;
+color: gray;
+}
+
+.menu a:link#current, #navlist a:visited#current, #navlist a:hover
+{
+border-bottom: 4px solid gray;
+padding-bottom: 2px;
+background: transparent;
+color: #000;
+}
+
+.menu a:hover { color: #000; }
+.main{ text-align:left;padding:20px;margin:20px;}
+.footer{text-align: left;}
+
+
+
+table {
+    border-collapse: collapse;
+    width:95%;
+height:50px;
+}
+
+table, td, th {
+    border: 3px solid #FFFFFF;
+    text-align: center;
+}
+
+table,th{background-color:#FFFF99;
+            color:#696969;
+            font-weight:bold;
+            padding: 25px;
+            vertical-align: bottom; 
+            height:40;
+            size:20px;}
+    
+table,tr{
+   background-color:#F08080;
+color:#FFFFFF;}
+
+ table  tr:hover  td{
+          background-color: #CCCCCC;	
+} 
+
+
+
+table tr:nth-child(even){background-color:  #EDEDED;
+                         color: #F08080;
+}
+
+td {height: 30px; 
+    vertical-align: bottom; 
+    padding: 10px;
+    text-align: center;
+    size:15px}
+
+
+
+h2{background-color:#F08080;
+    color: #FFFFFF;
+     padding:23px;
+    text-align: center;
+    border: 2px solid gray;
+    width:91%;
+    }
+
+h1{background-color:#F08080;
+    color: #FFFFFF;
+     padding:23px;
+    text-align: center;
+    border: 2px solid gray;
+    width:91%}
+
+h3{font-size:30px;
+    }
+
+input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #696969 ;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    background-color: #EDEDED;
+}
+input[readonly] {background-color: gray;}

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : Oct 1, 2017, 4:21:53 PM
-    Author     : danyhuang
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,10 +5,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nars Lipsticks Database</title>
+        <link rel="stylesheet" type="text/css" href="formatting.css"/>  
     </head>
     <body>
-        <h1>Nars Lipsticks Database</h1>
+      
+          <div class="wrap">
+              <%@include file="includes/header.jsp"%>
+              <br><br><br><br>
+              <%@include file="includes/menu.jsp"%>
+        <div class="main">
         
-        <a href="read"> View All Lipsticks </a>
+        <%@include file="includes/main.jsp"%>
+      
+        
+        
+        </div> <!-- close main -->
+         <%@include file="includes/footer.jsp"%>
+         
+          </div><!-- close wrap -->
     </body>
+   
 </html>

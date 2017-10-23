@@ -5,7 +5,7 @@
  */
 package controller;
 
-import dbHelpers.AddQuery;
+import dbHelpers.SearchQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -14,14 +14,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Lipsticks;
 
 /**
  *
  * @author danyhuang
  */
-@WebServlet(name = "AddServlet", urlPatterns = {"/addLipstick"})
-public class AddServlet extends HttpServlet {
+@WebServlet(name = "SearchServlet", urlPatterns = {"/search"})
+public class SearchServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +39,10 @@ public class AddServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddServlet</title>");            
+            out.println("<title>Servlet SearchServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet SearchServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -61,7 +60,7 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doPost(request, response);
+       doPost(request, response);
     }
 
     /**
@@ -75,33 +74,20 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        //get the data
-        String shade = request.getParameter("shade");
-        String series = request.getParameter("series");
-        int price = Integer.parseInt(request.getParameter("price"));
-        int rate = Integer.parseInt(request.getParameter("rate"));
-        
-        //set up a lipstick object
-        Lipsticks lipstick = new Lipsticks();
-        lipstick.setShade(shade);
-        lipstick.setSeries(series);
-        lipstick.setPrice(price);
-        lipstick.setRate(rate);
-        
-        
-        //set up an addQuery object
-        AddQuery aq = new AddQuery();
-        
-        
-        
-        //pass the lipstick to addQuery to add to the database
-        aq.doAdd(lipstick);
-        //pass execution control to the ReadServlet
-        String url = "/read";
-        
-        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-                   dispatcher.forward(request,response);
+       
+            String shade = request.getParameter("searchVal");
+            SearchQuery sq = new SearchQuery();
+            
+            sq.doSearch(shade);
+            String table = sq.getHTMLTable();
+            
+            
+            request.setAttribute("table",table);
+
+       String url = "/read.jsp";
+            
+            RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+            dispatcher.forward (request, response);
     }
 
     /**
